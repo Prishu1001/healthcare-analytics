@@ -90,19 +90,27 @@ def load_va_facilities(con):
 
 def load_ruca_codes(con):
     """
-    Load RUCA codes from Excel
+    Load RUCA codes from CSV or Excel
     """
     logger.info("Loading RUCA codes...")
     
+    # Try CSV first, then Excel
+    csv_file = RAW_DATA_DIR / "ruca_codes.csv"
     excel_file = RAW_DATA_DIR / "ruca_codes.xlsx"
     
-    if not excel_file.exists():
-        logger.error(f"RUCA codes file not found: {excel_file}")
+    if csv_file.exists():
+        file_to_load = csv_file
+        read_func = pd.read_csv
+    elif excel_file.exists():
+        file_to_load = excel_file
+        read_func = pd.read_excel
+    else:
+        logger.error(f"RUCA codes file not found: {csv_file} or {excel_file}")
         return False
     
     try:
-        # Read Excel file
-        df = pd.read_excel(excel_file)
+        # Read file
+        df = read_func(file_to_load)
         
         # Add load date
         df['load_date'] = date.today().isoformat()

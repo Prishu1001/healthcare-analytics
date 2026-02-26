@@ -38,8 +38,8 @@ DATA_SOURCES = {
         "description": "Medicare Provider Utilization and Payment Data"
     },
     "ruca_codes": {
-        "url": "https://www.ers.usda.gov/webdocs/DataFiles/53241/ruca2010zipcode.xlsx?v=5435.8",
-        "file_name": "ruca_codes.xlsx",
+        "url": "https://www.ers.usda.gov/webdocs/DataFiles/53241/ruca2010revised.xlsx",
+        "file_name": "ruca_codes.csv",
         "description": "Rural-Urban Commuting Area Codes"
     },
     "census_population": {
@@ -52,7 +52,7 @@ DATA_SOURCES = {
 # Data schema
 RAW_SCHEMA = "raw"
 STAGING_SCHEMA = "staging"
-ANALYTICS_SCHEMA = "analytics"
+ANALYTICS_SCHEMA = "analytics.analytics"  # Fully qualified to avoid ambiguity
 
 # RUCA Classification mapping
 RUCA_CLASSIFICATION = {
