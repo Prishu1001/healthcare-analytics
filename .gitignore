@@ -1,0 +1,25 @@
+﻿# Data files
+data/
+*.ddb
+*.csv
+*.xlsx
+*.json
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+
+# Superset
+superset_data/
+
+# Logs
+*.log

@@ -1,0 +1,46 @@
+# Data Validation Framework Requirements
+# Python 3.8+
+
+# Core Dependencies
+great-expectations==0.18.8
+pandas>=2.0.0
+numpy>=1.24.0
+sqlalchemy>=2.0.0
+
+# Data Processing
+pyarrow>=10.0.0
+openpyxl>=3.0.0
+
+# Visualization & Reporting
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.11.0
+
+# Jupyter & Notebooks
+jupyter>=1.0.0
+
+# Healthcare Analytics Project - Additional Dependencies
+duckdb==0.9.2
+requests==2.31.0
+tqdm==4.66.1
+ipykernel>=6.19.0
+notebook>=6.5.0
+
+# Testing
+pytest>=7.2.0
+pytest-cov>=4.0.0
+
+# Code Quality
+black>=22.0.0
+flake8>=6.0.0
+mypy>=0.990
+
+# Utilities
+python-dateutil>=2.8.0
+pyyaml>=6.0
+click>=8.1.0
+tqdm>=4.64.0
+
+# Development
+ipdb>=0.13.0
+pre-commit>=2.20.0
